@@ -1,0 +1,151 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  font: inherit;
+}
+
+/* Variables */
+:root {
+  --color-yellow: #ffc60b;
+  --color-green: #85ae85;
+  --color-light-blue: #0a95ff;
+  --color-dark-blue: #230aff;
+  --color-purple: #7766ff;
+  --color-lilac: #aaa0ff;
+  --color-dark-orange: #df880a;
+  --color-chocolate: #c16a08;
+  --color-light-chocolate: #eca43b;
+  --color-khaki: #ffde73;
+}
+
+@font-face {
+  font-family: "Yusei Magic";
+  src: url("./assets/fonts/yuseimagic.woff2");
+}
+
+body {
+  background-image: url("./assets/images/background.png");
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  min-width: 100vw;
+  overflow-x: hidden;
+  font-family: "Yusei Magic", sans-serif;
+  position: relative;
+}
+
+.header {
+  background-color: var(--color-khaki);
+  height: 50px;
+  padding-top: 5px;
+}
+
+.nav {
+  width: 380px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  position: relative;
+}
+
+.header-button {
+  background-color: inherit;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 5px 5px 0 0;
+  border-bottom: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.active-button {
+  background-color: var(--color-light-chocolate);
+}
+
+#content {
+  position: relative;
+  background-color: var(--color-khaki);
+  border-radius: 30px;
+  width: 810px;
+  padding: 55px;
+  margin: 45px auto;
+}
+
+.box-outer {
+  clip-path: polygon(
+    0 21%,
+    11% 0,
+    89% 0,
+    100% 21%,
+    100% 79%,
+    89% 100%,
+    11% 100%,
+    0 79%
+  );
+  padding: 20px;
+  width: 450px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  background-color: var(--color-chocolate);
+}
+
+.box-inner {
+  clip-path: polygon(
+    0 20%,
+    10% 0,
+    90% 0,
+    100% 20%,
+    100% 80%,
+    90% 100%,
+    10% 100%,
+    0 80%
+  );
+  padding: 30px;
+  background-color: var(--color-yellow);
+  position: relative;
+}
+
+.heading {
+  width: 710px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.decoration {
+  width: 50px;
+  position: absolute;
+  z-index: 1;
+}
+
+.bee-left {
+  top: 5px;
+  left: 30px;
+}
+
+.bee-right {
+  bottom: 1px;
+  right: 37px;
+  transform: rotate(-240deg);
+}
+
+.box-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.review h2 {
+  text-align: right;
+  font-size: 24px;
+}
+
+.box-inner p {
+  text-align: center;
+}
